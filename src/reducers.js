@@ -1,4 +1,4 @@
-import { SET_POLISH_RESULT, UPDATE_DNA_VALIDATION, ADD_DNA, CLEAR_DNAS } from './actions';
+import { SET_POLISH_RESULT, UPDATE_DNA_VALIDATION, ADD_DNA, CLEAR_DNAS, ADD_WATER_BODY, SET_AMOUNT_BODIES } from './actions';
 import { combineReducers } from 'redux';
 
 const polishNotation = (state = 0, action) => {
@@ -33,11 +33,27 @@ const dnas = (state = [], action) => {
 		default:
 			return state;
 	}
-}
+};
+
+const water = (state = { amountBodies: 0, bodies: [] }, action) => {
+	switch (action.type) {
+		case SET_AMOUNT_BODIES:
+			return Object.assign({}, state, {
+				amountBodies: action.amountBodies
+			});
+		case ADD_WATER_BODY:
+			return Object.assign({}, state, {
+				bodies: [...state.bodies, action.body]
+			});
+		default:
+			return state;
+	}
+};
 
 const calculationsApp = combineReducers({
 	polishNotation,
 	dnas,
+	water
 });
 
 export default calculationsApp;

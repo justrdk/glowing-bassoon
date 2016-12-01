@@ -25,7 +25,7 @@ const calculatePolishNotation = (polishNotation) => {
 
 const mapStateToProps = (state) => {
 	return {
-		polishNotation: state.polishNotation,
+		...state.polishNotation,
 	};
 };
 
@@ -35,7 +35,7 @@ const mapDispatchToProps = (dispatch) => {
 			dispatch(setPolishResult(calculatePolishNotation(polishNotation)));
 		}
 	}
-}
+};
 
 const PolishContainer = connect(mapStateToProps, mapDispatchToProps)(PolishNotation);
 export default PolishContainer;

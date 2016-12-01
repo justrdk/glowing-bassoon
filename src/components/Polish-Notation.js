@@ -14,7 +14,7 @@ const Polish = ({ polishNotation, calculatePolishNotation }) => {
 				<div className="field">
 					<div className="ui labeled input">
 						<div className="ui label">Polish Notation Result:</div>
-						<input type="text" placeholder="Result shows here..." value={polishNotation.polishNotation}  readOnly/>
+						<input type="text" placeholder="Result shows here..." value={polishNotation}  readOnly/>
 					</div>
 				</div>
 			</div>

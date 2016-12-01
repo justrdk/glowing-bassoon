@@ -44,5 +44,5 @@ const mapDispatchToProps = (dispatch) => {
 	}
 }
 
-const DNAContainer = connect(mapStateToProps, mapDispatchToProps, )(DnaStrand);
+const DNAContainer = connect(mapStateToProps, mapDispatchToProps)(DnaStrand);
 export default DNAContainer;
