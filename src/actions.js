@@ -4,6 +4,7 @@ export const UPDATE_DNA_VALIDATION = 'UPDATE_DNA_VALIDATION';
 export const CLEAR_DNAS = 'CLEAR_DNAS';
 export const ADD_WATER_BODY = 'ADD_WATER_BODY';
 export const SET_AMOUNT_BODIES = 'SET_AMOUNT_BODIES';
+export const SET_SIZES = 'SET_SIZES';
 
 export function setPolishResult(result) {
 	return {
@@ -45,4 +46,11 @@ export function setAmountBodies(amountBodies) {
 		type: SET_AMOUNT_BODIES,
 		amountBodies
 	}
-}
+};
+
+export function setBodySizes(sizes) {
+	return {
+		type: SET_SIZES,
+		sizes
+	};
+};

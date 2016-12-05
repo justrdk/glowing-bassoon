@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Water = ({ bodies, addWaterBody, setAmountBodies, sortBodiesWater }) => {
+const Water = ({ bodies, addWaterBody, setAmountBodies, sortBodiesWater, sizes }) => {
 	let inputWaterBody;
 	let inputAmountBodies;
 	return (
@@ -15,6 +15,10 @@ const Water = ({ bodies, addWaterBody, setAmountBodies, sortBodiesWater }) => {
 						<div className="ui labeled input">
 							<div className="ui label">Water Bodies:</div>
 							<input type="text" ref={node => { inputWaterBody = node }} placeholder="Type line integers separated by spaces" />
+						</div>
+						<div className="ui labeled input">
+							<div className="ui label">Result:</div>
+							<textarea value={sizes} readOnly/>
 						</div>
 					</div>
 				</div>
