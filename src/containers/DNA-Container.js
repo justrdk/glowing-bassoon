@@ -8,11 +8,8 @@ const dnaValidation = (dna) => {
 	}
 	const dnaPairs = {
 		U: 'Z',
-		Z: 'U',
 		V: 'Y',
-		Y: 'V',
-		W: 'X',
-		X: 'W'
+		W: 'X'
 	};
 
 	for (let i = 0; i < dna.length / 2; i++) {

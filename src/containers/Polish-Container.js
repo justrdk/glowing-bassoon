@@ -15,10 +15,17 @@ const calculatePolishNotation = (polishNotation) => {
 		if (operators.indexOf(token) === -1) {
 			result.push(token);
 		} else {
-			const num1 = result.pop();
 			const num2 = result.pop();
+			const num1 = result.pop();
+			const re = /^[\+\-\/\*]$/;
+			if (num1 != +num1 || num2 != +num2 || !re.test(token)) {
+				throw new Error('Invalid expression');
+			}
 			result.push(eval(num1 + token + ' ' + num2));
 		}
+	}
+	if (result.length !== 1) {
+		console.log('Invalid expression');
 	}
 	return result.pop();
 };
